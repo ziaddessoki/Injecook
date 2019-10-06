@@ -27,7 +27,7 @@ document.onkeyup = function (event) {
 
   // var computerGuess = choices[Math.floor(Math.random() * choices.length)];
 
-  guessedLetters.push(userGuess);
+  guessedLetters.push(userGuess.toUpperCase());
 
   if (choices.indexOf(userGuess)) {
 
@@ -39,8 +39,8 @@ document.onkeyup = function (event) {
 
 
     directionsText.textContent = "Choose again!!";
-    userChoiceText.textContent = "You chose: " + userGuess;
-    computerChoiceText.textContent = "The computer chose: " + computerGuess;
+    userChoiceText.textContent = "You chose: " + userGuess.toUpperCase();
+    // computerChoiceText.textContent = "The computer chose: " + computerGuess;
     winsText.textContent = "wins: " + wins;
     guessLeftText.textContent = "Guesses Left: " + guessesLeft;
     lossesText.textContent = "losses: " + losses;
@@ -53,6 +53,7 @@ document.onkeyup = function (event) {
 
   if (guessesLeft < 0) {
     losses++;
+    alert("The computer chose: " + computerGuess.toUpperCase());
     var playAgain = confirm("You Lost!! to play again press OK");
     if (playAgain == true) {
       // wins = 0;
