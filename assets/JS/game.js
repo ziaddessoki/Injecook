@@ -51,7 +51,7 @@ document.onkeyup = function (event) {
 
   };
 
-  if (guessesLeft < 0) {
+  if (guessesLeft < 1) {
     losses++;
     alert("The computer chose: " + computerGuess.toUpperCase());
     var playAgain = confirm("You Lost!! to play again press OK");
