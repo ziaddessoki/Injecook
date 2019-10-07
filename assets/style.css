@@ -1,7 +1,14 @@
  body{
      text-align: center;
-     background-color: black;
+     background-color: #231F20;
      color:white;
      font-size: 20px;
      line-height: 50px;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+ }
+
+ #game{
+    padding-top: 40px;
+    border:10px solid #ad974f;
+    margin: 20px 40px;
  }

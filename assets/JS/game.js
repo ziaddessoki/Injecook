@@ -33,6 +33,10 @@ document.onkeyup = function (event) {
 
     if (userGuess === computerGuess) {
       wins++;
+      alert("Good Job, You Won!!")
+      guessesLeft = 9;
+      guessedLetters = [];
+      computerGuess = choices[Math.floor(Math.random() * choices.length)];
     } else if (userGuess !== computerGuess) {
       guessesLeft--;
     }
